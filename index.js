@@ -1,4 +1,5 @@
 const fs = require('fs');
+const Json2csvParser = require('json2csv').Parser;
 const dataset = require('./data/data.json');
 
 let finalData = [];
@@ -20,3 +21,11 @@ fs.writeFile('./finalData.json', JSON.stringify(finalData), (err) => {
     }
     console.log('New dataset created');
 });
+
+try {
+    const parser = new Json2csvParser(opts);
+    const csv = parser.parse(finalData);
+    console.log(csv);
+} catch (err) {
+    console.error(err);
+}
