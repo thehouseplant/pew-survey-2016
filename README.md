@@ -1,7 +1,7 @@
 # Pew Survey 2016
 
 ## Environment Setup
-- Install Node.js:
+- Install Node.js
   - Download and run the installer found here: [https://nodejs.org/en/download/](https://nodejs.org/en/download/)
 
 - Install global dependencies
