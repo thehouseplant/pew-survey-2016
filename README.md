@@ -11,5 +11,5 @@
   - Navigate to the project directory and run `npm install`
 
 ## Commands
-- `npm run clean` cleans the data and saves it to a JSON file
-- `npm run csv` generates a CSV file from the cleaned data
+- `npm run clean` cleans the original dataset and saves it separated JSON files
+- `npm run csv` generates a CSV file from each of the JSON files
