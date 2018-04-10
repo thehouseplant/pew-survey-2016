@@ -4,8 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "chineseData": "json2csv -i ./data/chineseData.json -o ./data/chineseData.csv",
     "clean": "node index.js",
-    "csv": "json2csv -i chineseData.json -o chineseData.csv && json2csv -i usData.json -o usData.csv && json2csv -i combinedData.json -o combinedData.csv"
+    "combinedData": "json2csv -i ./data/combinedData.json -o ./data/combinedData.csv",
+    "csv": "npm run chineseData && npm run usData && npm run combinedData",
+    "usData": "json2csv -i ./data/usData.json -o ./data/usData.csv"
   },
   "repository": {
     "type": "git",

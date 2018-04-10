@@ -3,14 +3,14 @@ const dataset = require('./data/dataset.json');
 const fs = require('fs');
 
 // Chosen questions by country
-let combinedQuestions = [
-    'ID', 'country', 'q3', 'Q10A', 'Q10B', 'Q24B', 'Q27A', 'Q27B', 'Q27C', 'Q27D', 'Q27E', 'Q27F', 'q56'
-];
 let chinaQuestions = [
     'ID', 'country', 'Q2', 'Q4', 'Q5', 'Q6', 'Q6N', 'Q7', 'Q23', 'Q30', 'Q46a', 'Q46b', 'Q46c'
 ];
 let usQuestions = [
     'ID', 'country', 'Q24A', 'Q85A', 'Q85B', 'Q85C', 'Q85D', 'q100us'
+];
+let combinedQuestions = [
+    'ID', 'country', 'q3', 'Q10A', 'Q10B', 'Q24B', 'Q27A', 'Q27B', 'Q27C', 'Q27D', 'Q27E', 'Q27F', 'q56'
 ];
 
 // Placeholder arrays for responses
@@ -42,7 +42,7 @@ for (let i = 0; i < dataset.length; i++) {
 }
 
 // Write Chinese dataset
-fs.writeFile('./chineseData.json', JSON.stringify(chineseData), (err) => {
+fs.writeFile('./data/chineseData.json', JSON.stringify(chineseData), (err) => {
     if (err) {
         console.error(err);
         return;
@@ -51,7 +51,7 @@ fs.writeFile('./chineseData.json', JSON.stringify(chineseData), (err) => {
 });
 
 // Write US dataset
-fs.writeFile('./usData.json', JSON.stringify(usData), (err) => {
+fs.writeFile('./data/usData.json', JSON.stringify(usData), (err) => {
     if (err) {
         console.error(err);
         return;
@@ -60,7 +60,7 @@ fs.writeFile('./usData.json', JSON.stringify(usData), (err) => {
 });
 
 // Write combined dataset
-fs.writeFile('./combinedData.json', JSON.stringify(combinedData), (err) => {
+fs.writeFile('./data/combinedData.json', JSON.stringify(combinedData), (err) => {
     if (err) {
         console.error(err);
         return;
