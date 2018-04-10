@@ -5,7 +5,7 @@
   - Download and run the installer found here: [https://nodejs.org/en/download/](https://nodejs.org/en/download/)
 
 - Install global dependencies
-  - Run `npm install -g json2csv
+  - Run `npm install -g json2csv`
 
 - Install local dependencies
   - Navigate to the project directory and run `npm install`
